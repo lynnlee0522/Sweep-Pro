@@ -1,0 +1,12 @@
+file_format: "1"
+id: sweep-pro
+name: Sweep-Pro
+type: shield
+url: https://github.com/foostan/crkbd/
+requires: [pro_micro]
+features:
+  - keys
+  - encoders
+siblings:
+  - sweep_left
+  - sweep_right
