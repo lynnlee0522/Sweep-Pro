@@ -1,15 +1,5 @@
 #include "sweep.dtsi"
 
-&kscan0 {
-    col-gpios
-    = <&gpio1 0 GPIO_PULL_DOWN>
-    , <&gpio0 24 GPIO_PULL_DOWN>
-    , <&gpio0 22 GPIO_PULL_DOWN>
-    , <&gpio0 20 GPIO_PULL_DOWN>
-    , <&gpio0 17 GPIO_PULL_DOWN>
-    ;
-};
-
 &left_encoder {
     status = "okay";
 };

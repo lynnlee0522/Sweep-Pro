@@ -4,12 +4,6 @@
 	col-offset = <5>;
 };
 
-&kscan0 {
-    col-gpios
-    = <&gpio1 0 GPIO_PULL_DOWN>
-    , <&gpio0 24 GPIO_PULL_DOWN>
-    , <&gpio0 22 GPIO_PULL_DOWN>
-    , <&gpio0 20 GPIO_PULL_DOWN>
-    , <&gpio0 17 GPIO_PULL_DOWN>
-    ;
+&right_encoder {
+    status = "okay";
 };
