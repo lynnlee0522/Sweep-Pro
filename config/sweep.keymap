@@ -22,9 +22,6 @@
 };
 
 / {
-    chosen {
-        zmk,charmap = &charmap_us;
-    };
     behaviors {
         ht: hold_tap {
             label = "hold_tap";
@@ -70,7 +67,7 @@
                                 &lt LEF TAB  &kp LSHIFT     &kp SPACE &lt RIG TAB
             >;
         };
-
+a
         windows_layer {
             display-name = "WIN";
             bindings = <
@@ -95,7 +92,7 @@
             display-name = "SYMBOL";
             bindings = <
 &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp GRAVE  &kp TILDE
-&kp DQT   &kp LBKT  &kp LBRC  &kp LPAR  &default_report       &kp FSLH   &kp MINUS  &kp EQUAL  &kp COLON  &kp SEMI
+&kp DQT   &kp LBKT  &kp LBRC  &kp LPAR  &trans      &kp FSLH   &kp MINUS  &kp EQUAL  &kp COLON  &kp SEMI
 &kp SQT   &kp RBKT  &kp RBRC  &kp RPAR  &bootloader       &kp BSLH   &kp UNDER  &kp PLUS   &kp PIPE   &kp QMARK
                               &trans    &trans       &tog MOUSE     &trans
             >;
