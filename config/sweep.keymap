@@ -67,7 +67,7 @@
                                 &lt LEF TAB  &kp LSHIFT     &kp SPACE &lt RIG TAB
             >;
         };
-a
+
         windows_layer {
             display-name = "WIN";
             bindings = <
