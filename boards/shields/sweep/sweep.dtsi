@@ -1,5 +1,7 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <physical_layouts.dtsi>
+#include <behaviors/input_processor_gestures.dtsi>
+#include <behaviors/input_processor_absolute_to_relative.dtsi>
 
 / {
     kscan0: kscan0 {
@@ -129,18 +131,25 @@
 };
 
 / {
-    split_inputs {
-        #address-cells = <1>;
-        #size-cells = <0>;
-
-        glidepoint_split: glidepoint_split@0 {
-            compatible = "zmk,input-split";
-            reg = <0>;
-        };
-    };
     glidepoint_listener: glidepoint_listener {
         compatible = "zmk,input-listener";
         status = "disabled";
-        device = <&glidepoint_split>;
     };
 };
+
+// / {
+//     split_inputs {
+//         #address-cells = <1>;
+//         #size-cells = <0>;
+
+//         glidepoint_split: glidepoint_split@0 {
+//             compatible = "zmk,input-split";
+//             reg = <0>;
+//         };
+//     };
+//     glidepoint_listener: glidepoint_listener {
+//         compatible = "zmk,input-listener";
+//         status = "disabled";
+//         device = <&glidepoint_split>;
+//     };
+// };

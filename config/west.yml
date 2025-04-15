@@ -2,12 +2,22 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    # Additional modules containing boards/shields/custom code can be listed here as well
-    # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
+    # Add this:
+    - name: halfdane
+      url-base: https://github.com/halfdane/
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-  self:
-    path: config
+    # Add this:
+    - name: zmk-input-gestures
+      remote: halfdane
+      revision: main
+    # Add these if you want to use absolute mode:
+    - name: zmk-input-processors
+      remote: halfdane
+      revision: main
+    - name: cirque-input-module
+      remote: halfdane
+      revision: absolute_mode
