@@ -1,6 +1,6 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <physical_layouts.dtsi>
-#include <behaviors/input_processor_gestures.dtsi>
+// #include <behaviors/input_processor_gestures.dtsi>
 #include <behaviors/input_processor_absolute_to_relative.dtsi>
 
 / {
