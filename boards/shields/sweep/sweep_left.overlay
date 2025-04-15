@@ -1,4 +1,5 @@
 #include "sweep.dtsi"
+#include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
 
 &left_encoder {
@@ -44,13 +45,21 @@
     };
 };
 
+&zip_gestures {
+    tap-detection;
+
+    prevent_movement_during_tap;
+
+    circular-scroll;
+};
+
 &glidepoint_listener {
     status = "okay";
     device = <&glidepoint>;
     input-processors = <
-        &zip_absolute_to_relative 
-        &zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
+    &zip_gestures
+    &zip_absolute_to_relative
+    &zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT)
+    &zip_temp_layer 3 100
     >;
 };
-
-
