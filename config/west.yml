@@ -11,9 +11,9 @@ manifest:
       revision: main
       import: app/west.yml
     # Add this:
-    - name: zmk-input-gestures
-      remote: halfdane
-      revision: main
+    # - name: zmk-input-gestures
+    #   remote: halfdane
+    #   revision: main
     # Add these if you want to use absolute mode:
     - name: zmk-input-processors
       remote: halfdane
