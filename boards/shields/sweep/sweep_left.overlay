@@ -3,3 +3,7 @@
 &left_encoder {
     status = "okay";
 };
+
+&glidepoint_listener {
+    status = "okay";
+};

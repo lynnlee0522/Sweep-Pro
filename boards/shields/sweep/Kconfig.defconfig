@@ -1,5 +1,6 @@
-if SHIELD_SWEEP_LEFT
 
+
+if SHIELD_SWEEP_LEFT
 # Name must be less than 16 characters long!
 config ZMK_KEYBOARD_NAME
     default "Sweep"
@@ -9,9 +10,20 @@ config ZMK_SPLIT_ROLE_CENTRAL
 
 endif
 
-if SHIELD_SWEEP_LEFT || SHIELD_SWEEP_RIGHT
 
+if SHIELD_SWEEP_LEFT || SHIELD_SWEEP_RIGHT
 config ZMK_SPLIT
+    default y
+
+config ZMK_POINTING
+    default y
+
+endif
+
+
+if SHIELD_MY_KEYBOARD_RIGHT
+
+config SPI
     default y
 
 endif

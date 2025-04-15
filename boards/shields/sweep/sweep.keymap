@@ -1,5 +1,6 @@
 // Copyright (c) 2022 The ZMK Contributors
 // SPDX-License-Identifier: MIT
+#include <dt-bindings/zmk/rgb.h>
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 2500  // 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // 10
@@ -57,11 +58,12 @@
         default_layer {
             display-name = "DEFAULT";
             bindings = <
-            &soft_off   &kp W       &kp E        &kp R        &kp T         &kp Y      &kp U        &kp I        &kp O       &kp P
-            &kp A  &ht LALT S  &ht LCTRL D  &ht LGUI F   &kp G         &kp H      &ht RGUI J   &ht RCTRL K  &ht RALT L  &kp BSPC
-            &kp Z  &kp X       &kp C        &kp V        &kp B         &kp N      &kp M        &kp COMMA    &kp DOT     &kp ENTER
-            &lt LEF TAB  &kp LSHIFT     &kp SPACE &lt RIG TAB
+            &kp Q   &kp W       &kp E        &kp R        &kp T         &kp Y      &kp U        &kp I        &kp O       &kp P
+            &kp A   &ht LALT S  &ht LCTRL D  &ht LGUI F   &kp G         &kp H      &ht RGUI J   &ht RCTRL K  &ht RALT L  &kp BSPC
+            &kp Z   &kp X       &kp C        &kp V        &kp B         &kp N      &kp M        &kp COMMA    &kp DOT     &kp ENTER
+            &rgb_ug RGB_TOG    &rgb_ug RGB_ON     &rgb_ug RGB_ON        &rgb_ug RGB_ON   &rgb_ug RGB_ON   &rgb_ug RGB_ON
             >;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         windows_layer {
