@@ -7,3 +7,139 @@
 &glidepoint_listener {
     status = "okay";
 };
+
+// &pinctrl {
+    //     spi0_default: spi0_default {
+        //         group1 {
+            //             /* main role: configure P0.01 as SPI clock, P0.02 as SPI MOSI, P0.03 as SPI MISO */
+            //             psels = <NRF_PSEL(SPIM_SCK, 0, 17)>,
+                       //                     <NRF_PSEL(SPIM_MOSI, 0, 20)>;
+        //         };
+    //     };
+
+    //     spi0_sleep: spi0_sleep {
+        //         group1 {
+            //             /* main role: configure P0.01 as SPI clock, P0.02 as SPI MOSI, P0.03 as SPI MISO */
+            //             psels = <NRF_PSEL(SPIM_SCK, 0, 17)>,
+                       //                     <NRF_PSEL(SPIM_MOSI, 0, 20)>;
+            //             low-power-enable;
+        //         };
+    //     };
+// };
+
+// &spi0 {
+    //     status = "okay";
+    //     compatible = "nordic,nrf-spim";
+    //     pinctrl-0 = <&spi0_default>;
+    //     pinctrl-1 = <&spi0_sleep>;
+    //     pinctrl-names = "default", "sleep";
+    //     cs-gpios = <&gpio0 24 GPIO_ACTIVE_LOW>;
+    //     pinctrl-names = "default", "sleep";
+
+    //     display0: display@0 {
+        //         compatible = "solomon,ssd1680";
+        //         status = "okay";
+        //         reg = <0>;
+        //         width = <152>;
+        //         height = <152>;
+        //         spi-max-frequency = <4000000>;
+        //         reset-gpios = <&gpio1 4 GPIO_ACTIVE_LOW>;
+        //         dc-gpios = <&gpio0 22 GPIO_ACTIVE_LOW>;
+        //         busy-gpios = <&gpio0 6 GPIO_ACTIVE_HIGH>;
+
+    //     };
+
+    //     // display0: display@0 {
+        //         //     compatible = "gooddisplay,il0323";
+        //         //     reg = <0>;
+        //         //     width = <80>;
+        //         //     height = <128>;
+        //         //     spi-max-frequency = <4000000>;
+        //         //     dc-gpios = <&gpio0 11 GPIO_ACTIVE_LOW>;
+        //         //     busy-gpios = <&gpio0 25 GPIO_ACTIVE_LOW>;
+        //         //     reset-gpios = <&gpio0 24 GPIO_ACTIVE_LOW>;
+        //         //     pwr = [ 03 00 26 26  ];
+        //         //     cdi = <0xd2>;
+        //         //     tcon = <0x22>;
+    //     // };
+// };
+
+// / {
+    //     chosen {
+        //         zephyr,display = &display0;
+    //     };
+// };
+
+// &spi0 {
+    //     compatible = "nordic,nrf-spim";
+    //     status = "okay";
+    //     pinctrl-0 = <&spi0_default>;
+    //     pinctrl-1 = <&spi0_sleep>;
+    //     // cs-gpios = <&gpio0 9 GPIO_ACTIVE_LOW>;
+    //     cs-gpios = <&gpio0 24 GPIO_ACTIVE_LOW>;
+    //     pinctrl-names = "default", "sleep";
+
+    //     st7789v: st7789v@0 {
+        //         compatible = "sitronix,st7789v";
+        //         spi-max-frequency = <10000000>;
+        //         reg = <0>;
+        //         // cmd-data-gpios = <&gpio1 11 GPIO_ACTIVE_LOW>;
+        //         // reset-gpios = <&gpio1 15 GPIO_ACTIVE_LOW>;
+        //         cmd-data-gpios = <&gpio0 22 GPIO_ACTIVE_LOW>;
+        //         reset-gpios = <&gpio1 4 GPIO_ACTIVE_LOW>;
+        //         width = <240>;
+        //         height = <280>;
+        //         x-offset = <0>;
+        //         y-offset = <0>;
+        //         vcom = <0x19>;
+        //         gctrl = <0x35>;
+        //         vrhs = <0x12>;
+        //         vdvs = <0x20>;
+        //         mdac = <0x00>;
+        //         lcm = <0x2c>;
+        //         colmod = <0x05>;
+        //         gamma = <0x01>;
+        //         porch-param = [ 0c 0c 00 33 33  ];
+        //         cmd2en-param = [ 5a 69 02 01  ];
+        //         pwctrl1-param = [ a4 a1  ];
+        //         pvgam-param = [ D0 04 0D 11 13 2B 3F 54 4C 18 0D 0B 1F 23  ];
+        //         nvgam-param = [ D0 04 0C 11 13 2C 3F 44 51 2F 1F 1F 20 23  ];
+        //         ram-param = [ 00 F0  ];
+        //         rgb-param = [ CD 08 14  ];
+    //     };
+
+// };
+
+// / {
+    //     chosen {
+        //         zephyr,display = &st7789v;
+        //         zmk,display-led = &disp_led;
+    //     };
+    //     leds {
+        //         compatible = "gpio-leds";
+        //         disp_led: disp_led {
+            //             // gpios = <&gpio0 2 GPIO_ACTIVE_HIGH>;
+            //             gpios = <&gpio0 6 GPIO_ACTIVE_HIGH>;
+            //             label = "Display LED";
+        //         };
+    //     };
+
+// };
+
+// &pinctrl {
+//     /* configuration for i2c0 device, default state */
+//     i2c0_default: i2c0_default {
+//         group1 {
+//             psels = <NRF_PSEL(TWIM_SDA, 0, 7)>,
+//                     <NRF_PSEL(TWIM_SCL, 0, 27)>;
+//         };
+//     };
+
+//     i2c0_sleep: i2c0_sleep {
+//         group1 {
+//             psels = <NRF_PSEL(TWIM_SDA, 0, 7)>,
+//                     <NRF_PSEL(TWIM_SCL, 0, 27)>;
+//             low-power-enable;
+//         };
+//     };
+// };

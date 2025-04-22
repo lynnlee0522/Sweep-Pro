@@ -7,6 +7,8 @@ requires: [pro_micro]
 features:
   - keys
   - encoders
+  - cirque trackpad
+  - ink display
 siblings:
   - sweep_left
   - sweep_right
