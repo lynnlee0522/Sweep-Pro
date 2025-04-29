@@ -53,19 +53,12 @@ endif
 # endchoice
 
 
-
-config ZMK_SPLIT
+config SPI
     default y
 
-if ZMK_DISPLAY
-
-config I2C
+config SSD16XX
     default y
 
-config SSD1306
-    default y
-
-endif # ZMK_DISPLAY
 
 if LVGL
 
@@ -79,8 +72,9 @@ config LV_Z_BITS_PER_PIXEL
     default 1
 
 choice LV_COLOR_DEPTH
-    default LV_COLOR_DEPTH_1
+    default LV_COLOR_DEPTH_16
 endchoice
+
 
 endif # LVGL
 
