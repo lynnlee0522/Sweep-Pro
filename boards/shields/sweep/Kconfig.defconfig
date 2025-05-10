@@ -17,6 +17,13 @@ config ZMK_SPLIT
 endif
 
 
+config ZMK_POINTING
+    default y
+
+# Assuming pointing device uses SPI
+config SPI
+    default y
+
 # config SPI
 #     default y
 
