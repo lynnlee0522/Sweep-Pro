@@ -8,7 +8,7 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
-endif
+endif 
 
 
 if SHIELD_SWEEP_LEFT || SHIELD_SWEEP_RIGHT
@@ -17,7 +17,5 @@ config ZMK_SPLIT
 endif
 
 
-config ZMK_POINTING
-    default y
 
 
