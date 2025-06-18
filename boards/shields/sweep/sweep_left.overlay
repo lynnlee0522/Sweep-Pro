@@ -43,6 +43,7 @@
 		spi-dev = <&spi0>;
 		#address-cells = <1>;
 		#size-cells = <0>;
+        status = "okay";
 		
 		ssd1680: ssd1680@0 {
 			compatible = "solomon,ssd1680";
@@ -50,7 +51,8 @@
 			reg = <0>;
 			width = <152>;
 			height = <152>;
-			mipi-max-frequency = <4000000>;
+			mipi-max-frequency = <2000000>;
+            mipi-mode = <MIPI_DBI_MODE_SPI_4WIRE>;
 			busy-gpios = <&gpio0 6 GPIO_ACTIVE_HIGH>;
 			tssv = <0x80>;
 			// rotation = <90>;   // 关键：添加这一行
