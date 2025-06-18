@@ -51,16 +51,17 @@
 			compatible = "galaxycore,gc9x01x";
 			reg = <0>;
 			mipi-max-frequency = <DT_FREQ_M(100)>;
+			mipi-mode="MIPI_DBI_MODE_SPI_4WIRE";
 			pixel-format = <PANEL_PIXEL_FORMAT_RGB_565>;
 			display-inversion;
 			width = <240>;
 			height = <240>;
-			
+			status = "okay";
 		};
 		
 	};
 	
 	chosen {
 		zephyr,display = &gc9a01;
-	};	
+	};
 };
