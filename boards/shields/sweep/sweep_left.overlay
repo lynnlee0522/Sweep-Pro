@@ -41,7 +41,6 @@
 		reset-gpios = <&gpio1 4 GPIO_ACTIVE_LOW>;
 		dc-gpios = <&gpio0 22 GPIO_ACTIVE_HIGH>;
 		spi-dev = <&spi0>;
-		write-only;
 		
 		#address-cells = <1>;
 		#size-cells = <0>;
@@ -52,8 +51,8 @@
 			compatible = "sitronix,st7789v";
 			
 			reg = <0>;
-			mipi-max-frequency = <DT_FREQ_M(10)>;
-			mipi-mode = "MIPI_DBI_MODE_SPI_4WIRE";
+			mipi-max-frequency = <DT_FREQ_M(6)>;
+			mipi-mode = "MIPI_DBI_MODE_SPI_3WIRE";
 			
 			width = <240>;
 			height = <280>;
