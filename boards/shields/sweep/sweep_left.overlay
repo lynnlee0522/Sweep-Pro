@@ -52,7 +52,7 @@
 			width = <152>;
 			height = <152>;
 			mipi-max-frequency = <4000000>;
-            mipi-mode = "MIPI_DBI_MODE_SPI_3WIRE";
+            // mipi-mode = "MIPI_DBI_MODE_SPI_3WIRE";
 			busy-gpios = <&gpio0 6 GPIO_ACTIVE_HIGH>;
 			tssv = <0x80>;
 			// rotation = <90>;   // 关键：添加这一行
