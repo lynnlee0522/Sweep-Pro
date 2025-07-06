@@ -3,7 +3,7 @@
 if SHIELD_SWEEP_LEFT
 # Name must be less than 16 characters long!
 config ZMK_KEYBOARD_NAME
-    default "Sweep_Pro"
+    default "Sweep Pro"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
